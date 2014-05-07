@@ -1,13 +1,13 @@
 {
-    "name": "node-raphael-args”,
+    "name": "node-raphael-args",
     "description": "wrapper for raphael for usage in nodejs",
-    "version": “0.2.1”,
-    "homepage": "https://github.com/pseudonym117/node-raphael-args”,
+    "version": "0.2.1",
+    "homepage": "https://github.com/pseudonym117/node-raphael-args",
     "repository": {
         "type": "git",
         "url": "git://github.com/pseudonym117/node-raphael-args.git"
     },
-    "author": "dodo (https://github.com/pseudonym117)”,
+    "author": "pseudonym117 (https://github.com/pseudonym117)",
     "main": "index.js",
     "keywords": ["raphael", "svg"],
     "directories": {
