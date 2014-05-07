@@ -5,6 +5,7 @@ using the beatiful SVG library [Raphaël](http://raphaeljs.com) in [node.js](htt
 ## Features
 
 * static svg generation with raphael
+* ability to provide arguments to draw function for slightly more customizable rendering
 
 ## Installation
 
