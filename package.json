@@ -1,13 +1,13 @@
 {
     "name": "node-raphael",
     "description": "wrapper for raphael for usage in nodejs",
-    "version": "0.2.0",
-    "homepage": "https://github.com/dodo/node-raphael",
+    "version": “0.2.1”,
+    "homepage": "https://github.com/pseudonym117/node-raphael",
     "repository": {
         "type": "git",
-        "url": "git://github.com/dodo/node-raphael.git"
+        "url": "git://github.com/pseudonym117/node-raphael.git"
     },
-    "author": "dodo (https://github.com/dodo)",
+    "author": "dodo (https://github.com/pseudonym117)”,
     "main": "index.js",
     "keywords": ["raphael", "svg"],
     "directories": {

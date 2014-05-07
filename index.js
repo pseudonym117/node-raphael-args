@@ -3,7 +3,7 @@ var fs = require('fs')
   , jsdom = require('jsdom')
 
 var script = loadRaphael()
-module.exports.generate = function generate(width, height, callback) {
+module.exports.generate = function generate(width, height, callback, callback_args) {
     var win = jsdom.createWindow(jsdom.dom)
         , doc = jsdom.jsdom("<html><body></body></html>")
     var nav = win.navigator
@@ -11,7 +11,12 @@ module.exports.generate = function generate(width, height, callback) {
     doc.implementation.addFeature(
         "http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")
     paper = extractRaphael(win, doc, nav)(0, 0, width || 42, height || 42)
-    if (callback) callback(paper)
+    if (callback)	{
+    	if(callback_args === undefined)
+    		callback(paper)
+    	else
+    		callback(paper, callback_args);
+    }
     return doc.body.firstChild && doc.body.firstChild.outerHTML || ""
 }
 
