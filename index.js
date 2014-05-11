@@ -21,7 +21,7 @@ module.exports.generate = function generate(width, height, callback, callback_ar
 }
 
 function loadRaphael() {
-    var filename = require.resolve('raphael-light/raphael')
+    var filename = require.resolve('raphael/raphael')
     var code = fs.readFileSync(filename)
     code = code.toString('utf-8').replace("})(this);", "})(this);eve = window.eve;") // HACK
     code = "(function () {" + code + "}).call(window)"
