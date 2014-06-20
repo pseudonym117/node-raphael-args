@@ -1,4 +1,4 @@
-# node-raphael
+# node-raphael-args (includes raphael.JSON)
 
 using the beatiful SVG library [Raphaël](http://raphaeljs.com) in [node.js](http://nodejs.org/) to generate svg-data.
 
@@ -6,11 +6,12 @@ using the beatiful SVG library [Raphaël](http://raphaeljs.com) in [node.js](htt
 
 * static svg generation with raphael
 * ability to provide arguments to draw function for slightly more customizable rendering
+* export images to and import from JSON
 
 ## Installation
 
 ```bash
-npm install node-raphael
+npm install node-raphael-args
 ```
 
 ## Motivation
@@ -18,10 +19,12 @@ npm install node-raphael
 NIH - not invented here ...
 srsly .. i want to generate some good looking charts without using javascript on client side (because this is lame for none-interactive images)
 
+for the args and json part - i wanted to let functions be slightly more dynamic when rendering, and also wanted the ability to load json info from the client and regenerate it server side
+
 ## Usage
 
 ```javascript
-var raphael = require('node-raphael');
+var raphael = require('node-raphael-args');
 var svg = raphael.generate(width, height, function draw(paper) { … });
 ```
 

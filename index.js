@@ -3,6 +3,7 @@ var fs = require('fs')
   , jsdom = require('jsdom')
 
 var script = loadRaphael()
+  , rjsonscript = loadRaphaelJSON()
 module.exports.generate = function generate(width, height, callback, callback_args) {
     var win = jsdom.createWindow(jsdom.dom)
         , doc = jsdom.jsdom("<html><body></body></html>")
@@ -15,7 +16,7 @@ module.exports.generate = function generate(width, height, callback, callback_ar
     	if(callback_args === undefined)
     		callback(paper)
     	else
-    		callback(paper, callback_args);
+    		callback(paper, callback_args)
     }
     return doc.body.firstChild && doc.body.firstChild.outerHTML || ""
 }
@@ -25,6 +26,13 @@ function loadRaphael() {
     var code = fs.readFileSync(filename)
     code = code.toString('utf-8').replace("})(this);", "})(this);eve = window.eve;") // HACK
     code = "(function () {" + code + "}).call(window)"
+    return vm.createScript(code, filename)
+}
+function loadRaphaelJSON() {
+    var filename = require.resolve('raphael.json/raphael.json')
+    var code = fs.readFileSync(filename)
+    code = code.toString('utf-8')
+    //code = "(function () {" + code + "}).call(window)"
     return vm.createScript(code, filename)
 }
 
@@ -37,6 +45,9 @@ function extractRaphael(win, doc, nav) {
         console:   console,
         setTimeout: setTimeout,
         setInterval: setInterval,
+    })
+    rjsonscript.runInNewContext({
+        Raphael: win.Raphael
     })
     return win.Raphael
 }
