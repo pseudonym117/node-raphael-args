@@ -28,11 +28,11 @@ function loadRaphael() {
     code = "(function () {" + code + "}).call(window)"
     return vm.createScript(code, filename)
 }
+
 function loadRaphaelJSON() {
     var filename = require.resolve('raphael.json/raphael.json')
     var code = fs.readFileSync(filename)
     code = code.toString('utf-8')
-    //code = "(function () {" + code + "}).call(window)"
     return vm.createScript(code, filename)
 }
 
@@ -44,7 +44,7 @@ function extractRaphael(win, doc, nav) {
         navigator: nav,
         console:   console,
         setTimeout: setTimeout,
-        setInterval: setInterval,
+        setInterval: setInterval
     })
     rjsonscript.runInNewContext({
         Raphael: win.Raphael

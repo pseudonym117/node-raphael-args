@@ -3,3 +3,4 @@
 .lock-wscript
 lib/*
 node_modules/*
+.idea/*
