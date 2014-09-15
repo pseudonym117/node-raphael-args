@@ -1,7 +1,7 @@
 {
     "name": "node-raphael-args",
     "description": "wrapper for raphael for usage in nodejs",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "homepage": "https://github.com/pseudonym117/node-raphael-args",
     "repository": {
         "type": "git",
@@ -17,7 +17,7 @@
         "node": ">= 0.8.x"
     },
     "dependencies": {
-        "jsdom": "*",
+        "jsdom": "~0.10.1",
         "raphael": "*",
         "raphael.json": "*"
     }
