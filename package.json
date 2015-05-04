@@ -1,24 +1,27 @@
 {
-    "name": "node-raphael-args",
-    "description": "wrapper for raphael for usage in nodejs",
-    "version": "0.2.8",
-    "homepage": "https://github.com/pseudonym117/node-raphael-args",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/pseudonym117/node-raphael-args.git"
-    },
-    "author": "pseudonym117 (https://github.com/pseudonym117)",
-    "main": "index.js",
-    "keywords": ["raphael", "svg"],
-    "directories": {
-        "examples": "./example"
-    },
-    "engines": {
-        "node": ">= 0.8.x"
-    },
-    "dependencies": {
-        "jsdom": "~0.10.1",
-        "raphael": "*",
-        "raphael.json": "*"
-    }
+  "name": "node-raphael-args",
+  "description": "wrapper for raphael for usage in nodejs",
+  "version": "0.2.8",
+  "homepage": "https://github.com/pseudonym117/node-raphael-args",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pseudonym117/node-raphael-args.git"
+  },
+  "author": "pseudonym117 (https://github.com/pseudonym117)",
+  "main": "index.js",
+  "keywords": [
+    "raphael",
+    "svg"
+  ],
+  "directories": {
+    "examples": "./example"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "dependencies": {
+    "jsdom": "^3.1.2",
+    "raphael": "*",
+    "raphael.json": "*"
+  }
 }
